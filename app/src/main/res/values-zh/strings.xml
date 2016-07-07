@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">八方查</string>
+
+    <string name="main_tab_name_home">首页</string>
+    <string name="main_tab_name_attention">关注</string>
+    <string name="main_tab_name_find">发现</string>
+    <string name="main_tab_name_me">我的</string>
+</resources>

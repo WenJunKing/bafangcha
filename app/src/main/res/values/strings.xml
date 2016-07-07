@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name" translatable="false">八方查</string>
+
+    <string name="main_tab_name_home" translatable="false">首页</string>
+    <string name="main_tab_name_attention" translatable="false">关注</string>
+    <string name="main_tab_name_find" translatable="false">发现</string>
+    <string name="main_tab_name_me" translatable="false">我的</string>
+</resources>
