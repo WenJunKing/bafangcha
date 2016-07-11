@@ -5,4 +5,12 @@
     <string name="main_tab_name_attention" translatable="false">关注</string>
     <string name="main_tab_name_find" translatable="false">发现</string>
     <string name="main_tab_name_me" translatable="false">我的</string>
+
+
+    <string name="home_search_hint">请输入企业名、品牌名、经营项目名称...</string>
+    <string name="search_advanced">高级搜索</string>
+    <string name="search_patent">搜专利</string>
+    <string name="search_mark">搜商标</string>
+    <string name="search_shesu">搜涉诉</string>
+
 </resources>

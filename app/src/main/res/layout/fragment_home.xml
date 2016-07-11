@@ -1,21 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
 
+
+
+    <LinearLayout
         android:id="@+id/ll_appindex_top"
         android:background="@mipmap/icon_index_bgtop"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            android:background="@android:color/transparent"
+            android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+           >
+            <TextView
+                android:id="@+id/home_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="八方查-企业信用查询"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_20"
+                android:layout_gravity="center"
+                />
+        </android.support.v7.widget.Toolbar>
+        
         <TextView
-            android:textSize="@dimen/common_spsize_maxmain"
-            android:textColor="@color/common_white"
+            android:id="@+id/home_search_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_home_search_btn"
+            android:drawableRight="@mipmap/icon_search"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="@string/home_search_hint"
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/text_999"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        >
+        <TextView
+            android:id="@+id/search_shesu_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_width="fill_parent"
-            android:layout_height="?actionBarSize"
-            android:text="@string/appindex_title_name" />
+            android:drawablePadding="8dp"
+            android:text="@string/search_shesu"
+            android:drawableTop="@mipmap/notice_07"
+            android:textColor="@color/text_666"
+            />
+        <TextView
+            android:id="@+id/search_patent_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:drawablePadding="8dp"
+            android:text="@string/search_patent"
+            android:drawableTop="@mipmap/patent_07"
+            android:textColor="@color/text_666"
+            />
+
+        <TextView
+            android:id="@+id/search_mark_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:drawablePadding="8dp"
+            android:text="@string/search_mark"
+            android:drawableTop="@mipmap/mark_07"
+            android:textColor="@color/text_666"
+            />
+
+        <TextView
+            android:id="@+id/advanced_search_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:drawablePadding="8dp"
+            android:text="@string/search_advanced"
+            android:drawableTop="@mipmap/advanced_search_07"
+            android:textColor="@color/text_666"
+            />
     </LinearLayout>
 </LinearLayout>
