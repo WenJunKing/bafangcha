@@ -6,104 +6,187 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none"
+    >
     <LinearLayout
-        android:id="@+id/ll_appindex_top"
-        android:background="@mipmap/icon_index_bgtop"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:layout_collapseMode="pin"
-            android:background="@android:color/transparent"
-            android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-           >
+        <LinearLayout
+            android:id="@+id/ll_appindex_top"
+            android:background="@mipmap/icon_index_bgtop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                android:background="@android:color/transparent"
+                android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                >
+                <TextView
+                    android:id="@+id/home_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="八方查-企业信用查询"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_20"
+                    android:layout_gravity="center"
+                    />
+            </android.support.v7.widget.Toolbar>
+
             <TextView
-                android:id="@+id/home_title_tv"
+                android:id="@+id/home_search_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_home_search_btn"
+                android:drawableRight="@mipmap/icon_search"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="@string/home_search_hint"
+                android:textSize="@dimen/font_size_14"
+                android:textColor="@color/text_999"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            >
+            <TextView
+                android:id="@+id/search_shesu_btn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:drawablePadding="8dp"
+                android:text="@string/search_shesu"
+                android:drawableTop="@mipmap/notice_07"
+                android:textColor="@color/text_666"
+                android:background="?attr/selectableItemBackground"
+                />
+            <TextView
+                android:id="@+id/search_patent_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:text="@string/search_patent"
+                android:drawableTop="@mipmap/patent_07"
+                android:textColor="@color/text_666"
+                android:background="?attr/selectableItemBackground"
+                />
+
+            <TextView
+                android:id="@+id/search_mark_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:text="@string/search_mark"
+                android:drawableTop="@mipmap/mark_07"
+                android:textColor="@color/text_666"
+                android:background="?attr/selectableItemBackground"
+                />
+
+            <TextView
+                android:id="@+id/advanced_search_btn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:drawablePadding="8dp"
+                android:text="@string/search_advanced"
+                android:drawableTop="@mipmap/advanced_search_07"
+                android:textColor="@color/text_666"
+                android:background="?attr/selectableItemBackground"
+                />
+        </LinearLayout>
+        <View
+            style="@style/vertical_space_style"/>
+        <FrameLayout
+            android:background="@color/white"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp">
+
+            <TextView
+                android:textSize="@dimen/font_size_20"
+                android:textColor="#007DFF"
+                android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="八方查-企业信用查询"
-                android:textColor="@color/white"
-                android:textSize="@dimen/font_size_20"
-                android:layout_gravity="center"
-                />
-        </android.support.v7.widget.Toolbar>
-        
-        <TextView
-            android:id="@+id/home_search_btn"
+                android:layout_marginLeft="10dp"
+                android:text="热门企业" />
+            <View
+                android:background="#007DFF"
+                android:layout_width="4dp"
+                android:layout_height="fill_parent" />
+
+            <View android:layout_gravity="bottom" style="@style/MyHorizontalDividerLine" />
+        </FrameLayout>
+        <com.bafangcha.app.widget.linearlistview.LinearListView
+            android:id="@+id/hot_enterprise_list"
+            android:orientation="vertical"
+            android:divider="@color/space_color"
+            android:showDividers="none|middle|end"
+            android:background="@color/white"
+            app:dividerThickness="1px"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/bg_home_search_btn"
-            android:drawableRight="@mipmap/icon_search"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:hint="@string/home_search_hint"
-            android:textSize="@dimen/font_size_14"
-            android:textColor="@color/text_999"
-            android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            android:paddingRight="10dp"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        >
-        <TextView
-            android:id="@+id/search_shesu_btn"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:drawablePadding="8dp"
-            android:text="@string/search_shesu"
-            android:drawableTop="@mipmap/notice_07"
-            android:textColor="@color/text_666"
-            />
-        <TextView
-            android:id="@+id/search_patent_btn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:drawablePadding="8dp"
-            android:text="@string/search_patent"
-            android:drawableTop="@mipmap/patent_07"
-            android:textColor="@color/text_666"
-            />
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/search_mark_btn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:drawablePadding="8dp"
-            android:text="@string/search_mark"
-            android:drawableTop="@mipmap/mark_07"
-            android:textColor="@color/text_666"
-            />
+        </com.bafangcha.app.widget.linearlistview.LinearListView>
+        <View
+            style="@style/vertical_space_style"/>
+        <FrameLayout
+            android:background="@color/white"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp">
 
-        <TextView
-            android:id="@+id/advanced_search_btn"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:drawablePadding="8dp"
-            android:text="@string/search_advanced"
-            android:drawableTop="@mipmap/advanced_search_07"
-            android:textColor="@color/text_666"
-            />
+            <TextView
+                android:textSize="@dimen/font_size_20"
+                android:textColor="#007DFF"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="企业头条" />
+            <View
+                android:background="#007DFF"
+                android:layout_width="4dp"
+                android:layout_height="fill_parent" />
+
+            <View android:layout_gravity="bottom" style="@style/MyHorizontalDividerLine" />
+        </FrameLayout>
+        <com.bafangcha.app.widget.linearlistview.LinearListView
+            android:id="@+id/news_enterprise_list"
+            android:orientation="vertical"
+            android:divider="@color/space_color"
+            android:showDividers="none|middle|end"
+            android:background="@color/white"
+            app:dividerThickness="1px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.bafangcha.app.widget.linearlistview.LinearListView>
     </LinearLayout>
+
+</ScrollView>
+
+
 </LinearLayout>

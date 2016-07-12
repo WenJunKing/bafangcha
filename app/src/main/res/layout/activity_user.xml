@@ -30,6 +30,7 @@
     <View
         style="@style/MyHorizontalDividerLine"/>
     <RelativeLayout
+        android:id="@+id/ll_modify_nickname"
         android:background="@color/white"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"

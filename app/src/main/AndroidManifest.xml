@@ -15,7 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".ui.UserActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ui.ModifyNickNameActivity" android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="?attr/selectableItemBackground"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/news_icon_iv"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:background="#009DFF"
+        />
+    <TextView
+        android:id="@+id/news_title_tv"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/news_icon_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size_16"
+        android:textColor="@color/text_666"
+        android:lines="2"
+        android:ellipsize="end"
+        android:text="万科董事会全票否决宝能临时股东大会提案"
+        />
+    <TextView
+        android:layout_alignLeft="@id/news_title_tv"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="中国青年网"
+        android:textSize="@dimen/font_size_12"
+        android:textColor="@color/text_999"
+        />
+    <TextView
+        android:layout_alignRight="@id/news_title_tv"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2016-07-12"
+        android:textSize="@dimen/font_size_12"
+        android:textColor="@color/text_999"
+        />
+</RelativeLayout>

@@ -1,14 +1,12 @@
 package com.bafangcha.app.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.bafangcha.app.R;
 import com.bafangcha.app.widget.SystemBarHelper;
 
@@ -17,20 +15,18 @@ import butterknife.ButterKnife;
 
 /**
  * Author: Created by wenjundu
- * Date:on 2016/7/11
- * Description:个人中心
+ * Date:on 2016/7/12
+ * Description:修改昵称UI
  */
-public class UserActivity extends AppCompatActivity {
+public class ModifyNickNameActivity extends AppCompatActivity {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     @BindView(R.id.title_tv)
     TextView titleTV;
-    @BindView(R.id.ll_modify_nickname)
-    RelativeLayout ll_NickName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user);
+        setContentView(R.layout.activity_modify_nickname);
         ButterKnife.bind(this);
         init();
     }
@@ -40,18 +36,10 @@ public class UserActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("");
         toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.blue_header_bg));
-        titleTV.setText("个人中心");
+        titleTV.setText("修改昵称");
         titleTV.setTextColor(ContextCompat.getColor(this, R.color.white));
         SystemBarHelper.immersiveStatusBar(this);
         SystemBarHelper.setHeightAndPadding(this, toolbar);
-
-        ll_NickName.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(UserActivity.this,ModifyNickNameActivity.class);
-                startActivity(intent);
-            }
-        });
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -61,5 +49,4 @@ public class UserActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }
