@@ -2,6 +2,7 @@ package com.bafangcha.app.fragment;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -16,6 +17,7 @@ import android.widget.BaseAdapter;
 import android.widget.Toast;
 
 import com.bafangcha.app.R;
+import com.bafangcha.app.ui.EnterpriseIndexActivity;
 import com.bafangcha.app.widget.CircleProgressBar;
 import com.bafangcha.app.widget.ProgressBarView;
 import com.bafangcha.app.widget.SystemBarHelper;
@@ -62,6 +64,15 @@ public class HomeFragment extends Fragment {
         hotEnterpriseLV.setAdapter(hotAdapter);
         NewsAdapter newsAdapter=new NewsAdapter(getContext());
         newsEnterpriseLV.setAdapter(newsAdapter);
+
+        hotEnterpriseLV.setOnItemClickListener(new LinearListView.OnItemClickListener() {
+            @Override
+            public void onItemClick(LinearListView parent, View view, int position, long id) {
+                Intent intent=new Intent(getContext(), EnterpriseIndexActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
     class HotAdapter extends BaseAdapter{
         private LayoutInflater inflater;

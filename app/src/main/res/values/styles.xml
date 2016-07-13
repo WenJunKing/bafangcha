@@ -15,13 +15,6 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
-
-
-
-
-
-
-
     <style name="vertical_space_style">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">10dp</item>
@@ -33,6 +26,18 @@
         <item name="android:background">@color/space_color</item>
         <item name="android:layout_height">1px</item>
         <item name="android:layout_width">match_parent</item>
+    </style>
+
+    
+    <!--白底矩形Edit-->
+    <style name="rect_edittext_style">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/text_666</item>
+        <item name="android:textColorHint">@color/text_999</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
 
 

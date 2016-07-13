@@ -60,6 +60,7 @@
         android:layout_height="5dp"
         style="@style/vertical_space_style"/>
     <RelativeLayout
+        android:id="@+id/ll_modify_phone"
         android:background="@color/white"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"

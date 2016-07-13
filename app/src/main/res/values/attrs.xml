@@ -10,6 +10,15 @@
         <attr name="android:entries"/>
         <attr name="dividerThickness" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="CompanyInfoItem">
+        <attr name="no_data_title_iv" format="reference"></attr>
+        <attr name="has_data_title_iv" format="reference"></attr>
+        <attr name="title_tv" format="string"></attr>
+        <attr name="explain_text" format="string"></attr>
+        <attr name="has_data" format="boolean"></attr>
+    </declare-styleable>
+
     <declare-styleable name="CircleProgressBar">
         <attr name="line_count" format="integer"/>
         <attr name="draw_progress_text" format="boolean"/>

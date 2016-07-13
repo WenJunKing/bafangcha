@@ -27,6 +27,8 @@ public class UserActivity extends AppCompatActivity {
     TextView titleTV;
     @BindView(R.id.ll_modify_nickname)
     RelativeLayout ll_NickName;
+    @BindView(R.id.ll_modify_phone)
+    RelativeLayout ll_Phone;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +50,14 @@ public class UserActivity extends AppCompatActivity {
         ll_NickName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(UserActivity.this,ModifyNickNameActivity.class);
+                Intent intent = new Intent(UserActivity.this, ModifyNickNameActivity.class);
+                startActivity(intent);
+            }
+        });
+        ll_Phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserActivity.this, ModifyPhoneActivity.class);
                 startActivity(intent);
             }
         });
