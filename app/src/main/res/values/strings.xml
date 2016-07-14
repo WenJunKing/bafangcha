@@ -13,4 +13,7 @@
     <string name="search_mark">搜商标</string>
     <string name="search_shesu">搜涉诉</string>
 
+    <string name="app_title_user_center">个人中心</string>
+    <string name="app_title_modify_name">修改昵称</string>
+    <string name="app_title_telphone">手机号码</string>
 </resources>

@@ -21,21 +21,16 @@ import butterknife.ButterKnife;
  * Date:on 2016/7/7
  * Description:
  */
-public class MyselfFragment extends Fragment {
+public class MyselfFragment extends ABaseFragment {
     @BindView(R.id.layout_set)
     RelativeLayout rl_set;
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_myself,null);
-        ButterKnife.bind(this,view);
-        return view;
 
+    @Override
+    protected int inflateContentView() {
+        return R.layout.fragment_myself;
     }
-
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    protected void initData() {
         rl_set.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,4 +39,5 @@ public class MyselfFragment extends Fragment {
             }
         });
     }
+
 }

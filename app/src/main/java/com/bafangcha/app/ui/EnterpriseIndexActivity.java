@@ -1,52 +1,46 @@
 package com.bafangcha.app.ui;
 
 import android.graphics.drawable.Drawable;
-import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.bafangcha.app.R;
-import com.bafangcha.app.widget.SystemBarHelper;
-
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * Author: Created by wenjundu
  * Date:on 2016/7/13
  * Description:公司详情 首页
  */
-public class EnterpriseIndexActivity extends AppCompatActivity {
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
-    @BindView(R.id.title_tv)
-    TextView titleTV;
+public class EnterpriseIndexActivity extends BaseActivity {
+
     @BindView(R.id.ll_more_info)
     LinearLayout ll_moreInfo;
     @BindView(R.id.show_more_info_tv)
     TextView showInfoTV;
-
     private Boolean isShowInfo=false;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_enterprise_index);
-        ButterKnife.bind(this);
-        init();
+    protected int getContentViewLayoutID() {
+        return R.layout.activity_enterprise_index;
     }
 
-    private void init() {
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("");
-        toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.blue_header_bg));
-        SystemBarHelper.immersiveStatusBar(this);
-        SystemBarHelper.setHeightAndPadding(this, toolbar);
+    @Override
+    protected String getAppTitle() {
+        return null;
+    }
 
+    @Override
+    public void initView() {
+
+    }
+
+    @Override
+    public void initData() {
+
+    }
+    @Override
+    public void setListener() {
         showInfoTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,6 +60,6 @@ public class EnterpriseIndexActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
+
 }

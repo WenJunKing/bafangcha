@@ -20,6 +20,7 @@
         <activity android:name=".ui.ModifyNickNameActivity" android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".ui.ModifyPhoneActivity" android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".ui.EnterpriseIndexActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ui.SearchActivity" android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

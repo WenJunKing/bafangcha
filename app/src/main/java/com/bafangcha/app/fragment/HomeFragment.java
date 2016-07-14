@@ -8,18 +8,15 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.bafangcha.app.R;
 import com.bafangcha.app.ui.EnterpriseIndexActivity;
+import com.bafangcha.app.ui.SearchActivity;
 import com.bafangcha.app.widget.CircleProgressBar;
-import com.bafangcha.app.widget.ProgressBarView;
 import com.bafangcha.app.widget.SystemBarHelper;
 import com.bafangcha.app.widget.linearlistview.LinearListView;
 
@@ -31,35 +28,29 @@ import butterknife.ButterKnife;
  * Date:on 2016/7/7
  * Description:
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends ABaseFragment {
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
     @BindView(R.id.hot_enterprise_list)
     LinearListView hotEnterpriseLV;
     @BindView(R.id.news_enterprise_list)
     LinearListView newsEnterpriseLV;
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    @BindView(R.id.home_search_btn)
+    TextView searchBtn;
 
-        super.onCreate(savedInstanceState);
+    @Override
+    protected int inflateContentView() {
+        return R.layout.fragment_home;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home,null);
-        ButterKnife.bind(this,view);
-        return view;
-
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-
-        super.onActivityCreated(savedInstanceState);
+    protected void initWidget(View root) {
         SystemBarHelper.immersiveStatusBar(getActivity());
         SystemBarHelper.setHeightAndPadding(getActivity(), mToolbar);
-        //SystemBarHelper.tintStatusBar(getActivity(), getResources().getColor(R.color.colorPrimary));
+    }
 
+    @Override
+    protected void initData() {
         HotAdapter hotAdapter=new HotAdapter(getContext());
         hotEnterpriseLV.setAdapter(hotAdapter);
         NewsAdapter newsAdapter=new NewsAdapter(getContext());
@@ -68,12 +59,21 @@ public class HomeFragment extends Fragment {
         hotEnterpriseLV.setOnItemClickListener(new LinearListView.OnItemClickListener() {
             @Override
             public void onItemClick(LinearListView parent, View view, int position, long id) {
-                Intent intent=new Intent(getContext(), EnterpriseIndexActivity.class);
+                Intent intent = new Intent(getContext(), EnterpriseIndexActivity.class);
                 startActivity(intent);
             }
         });
 
+        searchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), SearchActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
+
     class HotAdapter extends BaseAdapter{
         private LayoutInflater inflater;
         public HotAdapter(Context context){
@@ -114,7 +114,7 @@ public class HomeFragment extends Fragment {
         }
         @Override
         public int getCount() {
-            return 2;
+            return 3;
         }
 
         @Override

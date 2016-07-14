@@ -20,33 +20,34 @@ import butterknife.ButterKnife;
  * Date:on 2016/7/11
  * Description:个人中心
  */
-public class UserActivity extends AppCompatActivity {
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
-    @BindView(R.id.title_tv)
-    TextView titleTV;
+public class UserActivity extends BaseActivity {
     @BindView(R.id.ll_modify_nickname)
     RelativeLayout ll_NickName;
     @BindView(R.id.ll_modify_phone)
     RelativeLayout ll_Phone;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user);
-        ButterKnife.bind(this);
-        init();
+    protected int getContentViewLayoutID() {
+        return R.layout.activity_user;
     }
 
-    private void init() {
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("");
-        toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.blue_header_bg));
-        titleTV.setText("个人中心");
-        titleTV.setTextColor(ContextCompat.getColor(this, R.color.white));
-        SystemBarHelper.immersiveStatusBar(this);
-        SystemBarHelper.setHeightAndPadding(this, toolbar);
+    @Override
+    protected String getAppTitle() {
+        return getString(R.string.app_title_user_center);
+    }
 
+    @Override
+    public void initView() {
+
+    }
+
+    @Override
+    public void initData() {
+
+    }
+
+    @Override
+    public void setListener() {
         ll_NickName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,13 +63,4 @@ public class UserActivity extends AppCompatActivity {
             }
         });
     }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
 }

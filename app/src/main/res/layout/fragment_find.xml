@@ -9,12 +9,4 @@
 
         />
 
-    <com.bafangcha.app.widget.ProgressBarView
-        android:id="@+id/hehe"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:gravity="center"
-        android:text="发现"
-        />
-
 </LinearLayout>
