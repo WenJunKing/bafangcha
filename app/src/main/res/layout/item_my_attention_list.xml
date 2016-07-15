@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:gravity="center_vertical"
+    android:layout_height="match_parent">
+    <com.bafangcha.app.widget.CircleImageView
+        android:id="@+id/attention_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/mark_07"
+        />
+    <TextView
+        android:id="@+id/attention_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="深圳中商产业研究院有限公司"
+        android:textColor="@color/text_666"
+        android:textSize="@dimen/font_size_16"
+        android:layout_marginLeft="10dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        />
+</LinearLayout>

@@ -35,9 +35,9 @@ public class EnterpriseIndexActivity extends BaseActivity {
 
     }
 
+
     @Override
     public void initData() {
-
     }
     @Override
     public void setListener() {

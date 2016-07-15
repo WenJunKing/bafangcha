@@ -25,7 +25,7 @@ public class FindFragment extends ABaseFragment {
 //    TextView titleTV;
 @BindView(R.id.tag_group)
 FlowTagView tagGroup;
-    String [] tags={"阿里巴巴","中商咨询有限公司","华为技术有限公司","勒布朗詹姆斯","科比布莱恩特"};
+    String [] tags={"阿里巴巴","中商咨询","华为技术有限公司","勒布朗詹姆斯","科比布莱恩特"};
     @Override
     protected int inflateContentView() {
         return R.layout.fragment_lately_search;

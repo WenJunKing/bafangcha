@@ -6,4 +6,10 @@
         layout="@layout/center_title_toolbar_layout"
 
         />
+    <com.bafangcha.app.widget.swipemenulistview.SwipeMenuListView
+        android:id="@+id/my_attention_list"
+        android:listSelector="?attr/selectableItemBackground"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"/>
 </LinearLayout>
