@@ -40,12 +40,52 @@
         <item name="android:gravity">center_vertical</item>
     </style>
 
+    <!--提交按钮-->
+    <style name="submit_btn_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/font_size_20</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/blue_base_bg</item>
+    </style>
+    <style name="MyDialog" parent="@android:Theme.Dialog">
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否为全屏 -->
+        <item name="android:windowFullscreen">false</item>
+
+        <item name="android:windowNoTitle">true</item>
+        <!-- 对话框是否透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否浮在下层窗体之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 背景 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 是否显示壁纸 -->
+        <item name="android:windowShowWallpaper">false</item>
+        <!-- 设置窗体内容背景 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 是否允许背景灰暗 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--  是否再点击外部可关闭 -->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <!-- 设置动画，注意是style -->
+        <item name="android:windowAnimationStyle">@style/dialogAnim</item>
+    </style>
+    <!-- 对话框动画-->
+    <style name="dialogAnim" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/dialog_enter</item>  //进入时的动画
+        <item name="@android:windowExitAnimation">@anim/dialog_exit</item>    //退出时的动画
+    </style>
     <style name="TagGroup">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="atg_isAppendMode">false</item>
         <item name="atg_borderColor">@color/space_color</item>
-        <item name="atg_textColor">@color/blue_header_bg</item>
+        <item name="atg_textColor">@color/blue_base_bg</item>
         <item name="atg_backgroundColor">#FFFFFF</item>
         <item name="atg_dashBorderColor">#AAAAAA</item>
         <item name="atg_inputHintColor">#80000000</item>
@@ -62,4 +102,6 @@
         <item name="atg_horizontalPadding">12dp</item>
         <item name="atg_verticalPadding">6dp</item>
     </style>
+
+
 </resources>

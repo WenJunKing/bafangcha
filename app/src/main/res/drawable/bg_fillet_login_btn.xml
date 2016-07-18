@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--圆角button-->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/blue_base_bg_60ts" />
+            <corners android:radius="50dip" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient android:startColor="@color/blue_base_bg" android:endColor="@color/blue_base_bg" android:angle="270.0" />
+            <corners android:radius="50dip" />
+        </shape>
+    </item>
+</selector>

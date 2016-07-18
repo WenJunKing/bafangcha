@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/center_title_toolbar_layout"
+        />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/register_phone_et"
+                style="@style/rect_edittext_style"
+                android:layout_marginLeft="30.0dip"
+                android:layout_marginRight="30.0dip"
+                android:layout_marginTop="30.0dip"
+                android:drawableLeft="@mipmap/login_number"
+                android:drawablePadding="10.0dip"
+                android:ems="10"
+                android:hint="@string/et_hint_please_input_phone"
+                android:inputType="number"
+                android:paddingLeft="10.0dip"
+                android:singleLine="true"
+                />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="30.0dip"
+                android:layout_marginRight="30.0dip"
+                android:layout_marginTop="20.0dip"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/register_valid_et"
+                    style="@style/rect_edittext_style"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.0"
+                    android:drawableLeft="@mipmap/register_validcode"
+                    android:drawablePadding="10.0dip"
+                    android:ems="10"
+                    android:hint="@string/et_hint_please_input_vercode"
+                    android:inputType="number"
+                    android:paddingLeft="10.0dip"
+                    android:singleLine="true"
+                    android:textColor="#ff333333"
+                    android:textColorHint="#ffabb5b9"
+                    />
+
+                <Button
+                    android:id="@+id/vercode_btn"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@color/blue_base_bg"
+                    android:text="@string/btn_click_vercode"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_18"
+                    android:enabled="false"
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="30.0dip"
+                android:layout_marginRight="30.0dip"
+                android:layout_marginTop="20.0dip" >
+
+                <EditText
+                    android:id="@+id/register_password_et"
+                    style="@style/rect_edittext_style"
+                    android:drawableLeft="@mipmap/login_password"
+                    android:drawablePadding="10.0dip"
+                    android:hint="@string/et_hint_password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="10.0dip"
+                    android:singleLine="true"
+                    />
+
+                <ToggleButton
+                    android:id="@+id/change_tb"
+                    android:layout_width="40.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.0dip"
+                    android:background="@drawable/selector_toggle_button"
+                    android:checked="false"
+                    android:textOff=""
+                    android:textOn=""
+                    />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/register_nickname_et"
+                style="@style/rect_edittext_style"
+                android:layout_marginLeft="30.0dip"
+                android:layout_marginRight="30.0dip"
+                android:layout_marginTop="20.0dip"
+                android:layout_marginBottom="30dp"
+                android:drawableLeft="@mipmap/register_nickname"
+                android:drawablePadding="10.0dip"
+                android:hint="@string/et_hint_nickname"
+                android:paddingLeft="10.0dip"
+                android:singleLine="true"
+                />
+            <!--
+            <TextView
+                android:id="@+id/tv_register_bind_tip"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_tip"
+                android:textSize="@dimen/font_size_12"
+                android:textColor="@color/base_text_color"
+                android:visibility="gone"
+                />
+                -->
+            <Button
+                android:id="@+id/register_btn"
+                style="@style/submit_btn_style"
+                android:layout_marginTop="10.0dip"
+                android:text="@string/btn_register"
+                android:enabled="false"
+                 />
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                >
+                <TextView
+                    android:id="@+id/agreement_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_999"
+                    android:textSize="@dimen/font_size_14"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

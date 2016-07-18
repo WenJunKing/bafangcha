@@ -10,21 +10,15 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="50dp"
-        android:hint="请输入昵称..."
+        android:hint="@string/et_hint_please_input_nickname"
         android:paddingLeft="10dp"
         android:maxLength="10"
      />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+    <Button
+        android:id="@+id/submit_btn"
+        style="@style/submit_btn_style"
         android:layout_marginTop="40dp"
-        android:gravity="center"
-        android:textSize="@dimen/font_size_20"
-        android:textColor="@color/white"
-        android:text="提交"
-        android:background="@color/blue_header_bg"
+        android:text="@string/btn_submit"
         />
 </LinearLayout>

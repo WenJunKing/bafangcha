@@ -13,6 +13,8 @@
     <color name="text_666">#666666</color>
     <color name="text_999">#999999</color>
 
-    <color name="blue_header_bg">#257DC8</color>
+    <color name="blue_base_bg">#FF257DC8</color>
+    <color name="blue_base_bg_60ts">#99257DCB</color>
+
     <color name="space_color">#e2e2e2</color>
 </resources>

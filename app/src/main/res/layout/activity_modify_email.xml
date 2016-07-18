@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/center_title_toolbar_layout"/>
+    <EditText
+        android:id="@+id/modify_email_et"
+        style="@style/rect_edittext_style"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="50dp"
+        android:hint="@string/et_hint_please_input_email"
+        android:paddingLeft="10dp"
+        android:maxLength="10"
+        />
+
+    <Button
+        android:id="@+id/submit_btn"
+        style="@style/submit_btn_style"
+        android:layout_marginTop="40dp"
+        android:text="@string/btn_submit"
+        />
+</LinearLayout>

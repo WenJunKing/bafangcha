@@ -11,7 +11,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:maxLength="11"
-        android:hint="请输入手机号"
+        android:hint="@string/et_hint_please_input_phone"
         />
     <LinearLayout
         android:layout_marginTop="10dp"
@@ -24,32 +24,25 @@
         <EditText
             android:id="@+id/vercode_et"
             style="@style/rect_edittext_style"
-            android:hint="请输入验证码"
+            android:hint="@string/et_hint_please_input_vercode"
             android:layout_weight="1"
             />
         <Button
             android:id="@+id/get_vercode_bt"
             android:layout_marginLeft="10dp"
-            android:text="获取验证码"
+            android:text="@string/btn_vercode"
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="@dimen/font_size_16"
-            android:background="@color/blue_header_bg"
+            android:background="@color/blue_base_bg"
             android:layout_width="100dp"
             android:layout_height="40dp" />
     </LinearLayout>
     <Button
         android:id="@+id/submit_bt"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/blue_header_bg"
-        android:gravity="center"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="50dp"
-        android:text="提交"
-        android:textSize="@dimen/font_size_20"
-        android:textColor="@color/white"
+        style="@style/submit_btn_style"
+        android:layout_marginTop="40dp"
+        android:text="@string/btn_submit"
         />
 
 </LinearLayout>

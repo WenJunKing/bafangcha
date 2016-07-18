@@ -21,11 +21,14 @@ import butterknife.ButterKnife;
  * Description:个人中心
  */
 public class UserActivity extends BaseActivity {
-    @BindView(R.id.ll_modify_nickname)
-    RelativeLayout ll_NickName;
-    @BindView(R.id.ll_modify_phone)
-    RelativeLayout ll_Phone;
-
+    @BindView(R.id.rl_modify_nickname)
+    RelativeLayout rl_NickName;
+    @BindView(R.id.rl_modify_phone)
+    RelativeLayout rl_Phone;
+    @BindView(R.id.rl_modify_email)
+    RelativeLayout rl_email;
+    @BindView(R.id.rl_modify_password)
+    RelativeLayout rl_password;
     @Override
     protected int getContentViewLayoutID() {
         return R.layout.activity_user;
@@ -48,17 +51,31 @@ public class UserActivity extends BaseActivity {
 
     @Override
     public void setListener() {
-        ll_NickName.setOnClickListener(new View.OnClickListener() {
+        rl_NickName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(UserActivity.this, ModifyNickNameActivity.class);
                 startActivity(intent);
             }
         });
-        ll_Phone.setOnClickListener(new View.OnClickListener() {
+        rl_Phone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(UserActivity.this, ModifyPhoneActivity.class);
+                startActivity(intent);
+            }
+        });
+        rl_email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserActivity.this, ModifyEmailActivity.class);
+                startActivity(intent);
+            }
+        });
+        rl_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserActivity.this, ModifyPasswordActivity.class);
                 startActivity(intent);
             }
         });

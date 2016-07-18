@@ -5,12 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/center_title_toolbar_layout"/>
-    <include layout="@layout/entindex_section_top"/>
+    <include
+        layout="@layout/center_title_toolbar_layout"/>
+    <include
+        layout="@layout/entindex_section_top"
+        />
     <ScrollView
+        android:id="@+id/scroll_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="none"
+        android:layout_weight="1"
         >
         <LinearLayout
             android:orientation="vertical"
@@ -39,7 +44,7 @@
                         android:textColor="@color/text_999"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="法定代表人" />
+                        android:text="@string/tv_legal_representative" />
                     <Space
                         android:layout_width="fill_parent"
                         android:layout_height="8dp" />
@@ -47,10 +52,9 @@
                         android:textSize="@dimen/font_size_14"
                         android:textColor="@color/text_333"
                         android:ellipsize="end"
-                        android:id="@+id/tv_entindex_opername"
+                        android:id="@+id/legal_representative_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="张三丰"
                         android:singleLine="true" />
                 </LinearLayout>
                 <LinearLayout
@@ -64,7 +68,7 @@
                         android:textColor="@color/text_999"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="注册资本" />
+                        android:text="@string/tv_registered_capital" />
                     <Space
                         android:layout_width="fill_parent"
                         android:layout_height="8dp" />
@@ -72,10 +76,9 @@
                         android:textSize="@dimen/font_size_14"
                         android:textColor="@color/text_333"
                         android:ellipsize="end"
-                        android:id="@+id/tv_entindex_regicapi"
+                        android:id="@+id/registered_capital_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="398881.00万元"
                         android:singleLine="true" />
 
                 </LinearLayout>
@@ -90,7 +93,7 @@
                         android:textColor="@color/text_999"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="注册日期" />
+                        android:text="@string/tv_registered_date" />
                     <Space
                         android:layout_width="fill_parent"
                         android:layout_height="8dp" />
@@ -98,10 +101,9 @@
                         android:textSize="@dimen/font_size_14"
                         android:textColor="@color/text_333"
                         android:ellipsize="end"
-                        android:id="@+id/tv_entindex_regidate"
+                        android:id="@+id/registered_date_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1987-09-15"
                         android:singleLine="true" />
                 </LinearLayout>
             </LinearLayout>
@@ -119,7 +121,6 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="0755-630455616"
                     android:textSize="@dimen/font_size_14"
                     android:textColor="@color/text_333"
                     android:drawableLeft="@mipmap/icon_entindex_phone"
@@ -129,8 +130,8 @@
                     android:id="@+id/show_more_info_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="其他联系信息"
-                    android:drawableRight="@mipmap/arrow_down_close"
+                    android:text="@string/tv_more_contact_info"
+                    android:drawableRight="@mipmap/icon_entindex_expand"
                     android:drawablePadding="8dp"
                     android:textSize="@dimen/font_size_14"
                     android:textColor="@color/text_666"
@@ -148,7 +149,7 @@
                 <TextView
                     android:textSize="@dimen/font_size_14"
                     android:textColor="@color/text_666"
-                    android:id="@+id/entindex_address_tv"
+                    android:id="@+id/ent_address_tv"
                     android:paddingLeft="20dp"
                     android:paddingRight="12dp"
                     android:layout_width="fill_parent"
@@ -156,26 +157,24 @@
                     android:gravity="center_vertical"
                     android:drawableLeft="@mipmap/icon_entindex_address"
                     android:drawableRight="@mipmap/usercenter_arrow_right"
-                    android:text="深圳市龙岗区坂田华为总部办公楼"
                     android:drawablePadding="5dp" />
                 <View style="@style/MyHorizontalDividerLine" />
                 <TextView
                     android:textSize="@dimen/font_size_14"
-                    android:textColor="@color/blue_header_bg"
+                    android:textColor="@color/blue_base_bg"
                     android:paddingLeft="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="公司简介" />
+                    android:text="@string/tv_enterprise_introduce" />
                 <TextView
                     android:textSize="@dimen/font_size_14"
                     android:textColor="@color/text_666"
-                    android:id="@+id/tv_entindex_introduce"
+                    android:id="@+id/ent_introduce_tv"
                     android:paddingLeft="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="乐视视频，原名乐视网，成立于2004年北京，被业界称为“乐视模式”。乐视垂直产业链整合业务涵盖互联网视频、影视制作与发行、智能终端、应用市场、电子商务、互联网智能电动汽车等；旗下公司包括乐视网、乐视致新、乐视移动、乐视影业、乐视体育、网酒网、乐视控股等；2014年乐视全生态业务总收入接近100亿元。"
                     android:layout_marginRight="12dp"
                     android:lineSpacingExtra="3dp" />
                 <Space android:layout_width="fill_parent" android:layout_height="12dp" />
@@ -184,7 +183,7 @@
                 android:layout_width="match_parent"
                 android:background="@color/space_color"
                 android:layout_height="30dp"
-                android:text="基本信息"
+                android:text="@string/menu_text_basic_info"
                 android:textSize="@dimen/font_size_20"
                 android:textColor="@color/text_333"
                 android:paddingLeft="20dp"
@@ -235,7 +234,7 @@
                 android:layout_width="match_parent"
                 android:background="@color/space_color"
                 android:layout_height="30dp"
-                android:text="知识产权"
+                android:text="@string/menu_text_intellectual_property"
                 android:textSize="@dimen/font_size_20"
                 android:textColor="@color/text_333"
                 android:paddingLeft="20dp"
@@ -287,7 +286,7 @@
                 android:layout_width="match_parent"
                 android:background="@color/space_color"
                 android:layout_height="30dp"
-                android:text="公共监督"
+                android:text="@string/menu_text_publicly_supervise"
                 android:textSize="@dimen/font_size_20"
                 android:textColor="@color/text_333"
                 android:paddingLeft="20dp"
@@ -339,7 +338,7 @@
                 android:layout_width="match_parent"
                 android:background="@color/space_color"
                 android:layout_height="30dp"
-                android:text="企业经营"
+                android:text="@string/menu_text_enterprise_management"
                 android:textSize="@dimen/font_size_20"
                 android:textColor="@color/text_333"
                 android:paddingLeft="20dp"
@@ -387,8 +386,7 @@
                     app:explain_text="共0件"
                     />
             </LinearLayout>
-            <View
-                style="@style/MyHorizontalDividerLine"/>
         </LinearLayout>
     </ScrollView>
+    <include layout="@layout/include_detail_bottom"/>
 </LinearLayout>
